@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
+import { Platform, Text } from "react-native";
 import {
   MaterialIcons,
   FontAwesome5,
@@ -13,6 +13,10 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarHideOnKeyboard: true,
+        tabBarActiveTintColor: "#e4e4e7",
+        tabBarInactiveTintColor: "#cbd5e1",
+        tabBarActiveBackgroundColor: "#475569",
+        tabBarInactiveBackgroundColor: "#0f172a",
         tabBarStyle: Platform.select({
           ios: { position: "absolute" },
           default: {},
@@ -24,7 +28,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: () => (
-            <MaterialIcons name="home" size={32} color="black" />
+            <MaterialIcons name="home" size={32} color="#e4e4e7" />
           ),
         }}
       />
@@ -33,7 +37,7 @@ export default function TabLayout() {
         options={{
           title: "Mood",
           tabBarIcon: () => (
-            <FontAwesome5 name="theater-masks" size={24} color="black" />
+            <FontAwesome5 name="theater-masks" size={24} color="#e4e4e7" />
           ),
         }}
       />
@@ -42,7 +46,7 @@ export default function TabLayout() {
         options={{
           title: "Search",
           tabBarIcon: () => (
-            <MaterialIcons name="search" size={32} color="black" />
+            <MaterialIcons name="search" size={32} color="#e4e4e7" />
           ),
         }}
       />
@@ -54,7 +58,7 @@ export default function TabLayout() {
             <MaterialCommunityIcons
               name="robot-happy-outline"
               size={24}
-              color="black"
+              color="#e4e4e7"
             />
           ),
         }}

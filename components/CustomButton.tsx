@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from "react-native";
 
 type ButtonProps = {
   title: string;
@@ -7,13 +7,11 @@ type ButtonProps = {
 
 export default function CustomButton({ title, onPress }: ButtonProps) {
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
       className="bg-blue-500 p-4 rounded-lg active:bg-blue-700"
       onPress={onPress}
     >
-      <Text className="text-white text-center font-bold text-lg">
-        {title}
-      </Text>
+      <Text className="text-white text-center font-bold text-lg">{title}</Text>
     </TouchableOpacity>
   );
 }

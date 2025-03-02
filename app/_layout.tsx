@@ -1,11 +1,15 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import "../styles/global.css"
+import { Provider } from "react-redux";
+import { store } from "../utils/store";
+import "../global.css";
 export default function RootLayout() {
   return (
     <>
       <StatusBar style="light" />
-      <Stack screenOptions={{ headerShown: false }} />
+      <Provider store={store}>
+        <Stack screenOptions={{ headerShown: false }} />
+      </Provider>
     </>
   );
 }
